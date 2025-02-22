@@ -144,14 +144,13 @@ public class ADefenseGamemode : AGameMode
         var transform = new FTransform(FQuat.Identity, location + new FVector(0, 0, 150), FVector.One);
 
         var spawnParams = new FCSSpawnActorParameters();
-        spawnParams.DeferConstruction = true;
         spawnParams.SpawnMethod = ESpawnActorCollisionHandlingMethod.AlwaysSpawn;
 
-        var soldierUnit = SpawnActor(transform, resourceManager.SoldierUnitClass, spawnParams);
-        soldierUnit.AIControllerClass = typeof(AEnemyAdvancedAIController);
-        soldierUnit.Team = ETeam.Yellow;
-
-        soldierUnit.FinishSpawning();
+        var soldierUnit = SpawnActorDeferred(transform, resourceManager.SoldierUnitClass, spawnParams, character =>
+        {
+            character.AIControllerClass = typeof(AEnemyAdvancedAIController);
+            character.Team = ETeam.Yellow;
+        });
 
         return soldierUnit;
     }
