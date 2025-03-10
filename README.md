@@ -3,6 +3,8 @@
 This project is an sample project originally made for the Mini Jam 174 - Defense game jam, the goal of this project was to show off UnrealSharp
 with what can be done and how.
 
+![game-image](https://github.com/user-attachments/assets/80abd5c7-7457-4a38-97ce-852564e93595)
+
 ## Credits
 
 ## Voice SFX
