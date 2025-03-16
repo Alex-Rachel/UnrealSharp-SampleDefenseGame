@@ -11,6 +11,10 @@
     <Reference Include="UnrealSharp">
       <HintPath>..\..\Plugins\UnrealSharp\Binaries\Managed\net9.0\UnrealSharp.dll</HintPath>
     </Reference>
+
+    <Reference Include="UnrealSharp">
+      <HintPath>..\..\Plugins\UnrealSharp\Binaries\Managed\net9.0\UnrealSharp.Core.dll</HintPath>
+    </Reference>
     <Analyzer Include="..\..\Plugins\UnrealSharp\Binaries\Managed\UnrealSharp.SourceGenerators.dll" />
     <ProjectReference Include="..\ProjectGlue\ProjectGlue.csproj" />
   </ItemGroup>
